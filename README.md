@@ -17,6 +17,41 @@ We attempt to make improvements upon the baseline performance of the algorithm b
 
 The main performance metrics were ``Execution Time`` and ``Throughput``.
 
+## How to Run
+
+The desired version can be compiled using the given Makefile as follows.
+```bash
+make <VERSION>
+```
+
+`VERSION` can be any of the following:
+
+1. Brute force: `brute_nw`
+2. Cache locality: `optimized_nw_1`
+3. Compiler optimizations: `optimized_nw_2`
+4. Anti-diagonal parallelization: `optimized_nw_3`
+5. Submatrix Tiling: `optimized_nw_4`
+
+To then run the generated executable, run
+```bash
+./<VERSION>
+```
+
+This then generates a text file containing the output of the form
+```bash
+A1 B1
+A2 B2
+...
+...
+...
+```
+where A1, A2, etc. are the execution times for particular lengths of the strings and B1, B2, etc. are the corresponding lengths of the strings.
+
+A plot of execution time vs length of the string can be generated for all the output text files by running
+```bash
+python3 plot.py
+```
+
 ## Brute Force
 
 The code for the brute force, unoptimized version of the Needleman-Wunsch algorithm is present in `brute_nw.cpp`.

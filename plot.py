@@ -19,8 +19,8 @@ for file in [
         plt.plot(x, y)
 
 plt.xlabel("n")
-plt.ylabel("Throughput in GIPS")
-plt.title("Throughput vs n")
+plt.ylabel("Execution Time in ms")
+plt.title("Execution Time vs n")
 plt.legend(
     [
         "Brute force (Column-wise)",

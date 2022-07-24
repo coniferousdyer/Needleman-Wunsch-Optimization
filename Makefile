@@ -1,8 +1,8 @@
 # indicate how the object files are to be created
-# CC         := g++
-CC		   := icc
-# CFLAGS     := -g -O3 -fopenmp
-CFLAGS     := -g -O3 -axCORE-AVX2  -qopenmp
+CC         := g++
+# CC		   := icc
+CFLAGS     := -g -O3 -fopenmp
+# CFLAGS     := -g -O3 -axCORE-AVX2  -qopenmp
 
 OBJECT_FILES_BRUTE := brute_nw.o helper.o
 OBJECT_FILES_OPTIMIZED_1 := optimized_nw_1.o helper.o
